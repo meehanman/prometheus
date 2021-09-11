@@ -10,7 +10,7 @@ describe('Graph', () => {
     jest.spyOn(window, 'requestAnimationFrame').mockImplementation((cb: any) => cb());
   });
 
-  // fix coming from https://github.com/maslianok/react-resize-detector#testing-with-enzyme-and-jest
+  // Source: https://github.com/maslianok/react-resize-detector#testing-with-enzyme-and-jest
   beforeEach(() => {
     window.ResizeObserver = jest.fn().mockImplementation(() => ({
       observe: jest.fn(),
